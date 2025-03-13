@@ -1,0 +1,10 @@
+{
+  "browser": "chrome",
+  "options": {
+    "headless-mode": false,
+    "--disable-notifications": true
+  },
+  "base_url": "https://www.lcw.com",
+  "timeout": 10,
+  "maximize": true
+}
