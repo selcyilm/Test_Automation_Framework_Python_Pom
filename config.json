@@ -4,6 +4,6 @@
     "headless-mode": false,
     "disable-notifications": true
   },
-  "base_url": "https://www.lcw.com",
+  "base_url": "https://www.amazon.com.tr/",
   "timeout": 10
 }
