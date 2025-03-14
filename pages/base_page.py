@@ -20,8 +20,17 @@ class BasePage(object):
         action = ActionChains(self.driver)
         action.move_to_element(self.get(*by_locator)).perform()
 
+    def hover_and_click(self, *by_locator):
+        element = self.get(*by_locator)
+        action = ActionChains(self.driver)
+        action.move_to_element(element).perform()
+        element.click()
+
     def get_current_url(self):
         return self.driver.current_url
+
+    def get_page_title(self):
+        return self.driver.title
 
     def wait_element(self, method, message=''):
         return self.wait.until(EC.element_to_be_clickable(method), message)
