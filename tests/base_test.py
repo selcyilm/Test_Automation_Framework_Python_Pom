@@ -13,6 +13,9 @@ class BaseTest(unittest.TestCase):
         config_file.close()
         return config
 
+    def get_base_url(self):
+        return self.get_json_config()["base_url"]
+
     def setUp(self):
         config = self.get_json_config()
         self.driver = DriverFactory.init_driver(config)
