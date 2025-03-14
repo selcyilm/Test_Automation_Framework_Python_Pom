@@ -1,4 +1,5 @@
 from selenium.webdriver import ActionChains
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -37,3 +38,7 @@ class BasePage(object):
 
     def get_text(self, locator):
         return self.wait_element(locator).text
+
+    def select_by_visible_text(self, locator, visible_text):
+        select = Select(self.get(*locator))
+        select.select_by_visible_text(visible_text)
