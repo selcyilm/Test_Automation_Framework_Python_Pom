@@ -58,6 +58,8 @@ class TestClass(BaseTest):
         #11. Verify that you are on the cart page and that the correct product has been added to
         #the cart
         cart_page = CardPage(self.driver)
+        self.assertTrue(cart_page.get_page_title().endswith("Alışveriş Sepeti"),
+                        "Error: You're not on the cart page!")
         self.assertEqual(product_title_text,
                          cart_page.get_cart_product_full_name(),
                          "Error: Wrong product has been added to the cart!")
