@@ -60,12 +60,6 @@ You can run it like this:
 ```bash
 python -m unittest discover tests
 ```
-## Run Test Cases
-
-You can run tests using the following command:
-```bash
-python -m unittest discover tests
-```
 > **Note**
 > 
 > If you run tests from PyCharm,
