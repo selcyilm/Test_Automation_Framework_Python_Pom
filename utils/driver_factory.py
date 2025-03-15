@@ -3,6 +3,12 @@ from selenium import webdriver
 class DriverFactory:
     @staticmethod
     def init_driver(config):
+        """
+        Configuring and instantiating the WebDriver based on the provided configuration
+        :param config: json object specifies browser type and settings
+        :return: configured Webdriver instance
+        :raise exception if unsupported browser is specified
+        """
         if config["browser"] == "chrome":
             chrome_options = webdriver.ChromeOptions()
             if config["options"]["headless-mode"]:
