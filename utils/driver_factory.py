@@ -15,9 +15,9 @@ class DriverFactory:
             return driver
         elif config["browser"] == "edge":
             edge_options = webdriver.EdgeOptions()
-            if config["options.headless-mode"]:
+            if config["options"]["headless-mode"]:
                 edge_options.add_argument("--headless")
-            if config["options.disable-notifications"]:
+            if config["options"]["disable-notifications"]:
                 edge_options.add_argument("--disable-notifications")
             driver = webdriver.Edge(edge_options)
             driver.implicitly_wait(config["timeout"])
