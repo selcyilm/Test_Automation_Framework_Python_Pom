@@ -6,11 +6,11 @@ from pages.search_results_page import SearchResultsPage
 from tests.base_test import BaseTest
 
 
-class TestClass(BaseTest):
+class TestCheckAddAndDeleteCartAmazon(BaseTest):
 
     def test_check_add_and_delete_cart_amazon(self):
         #1. Go to https://www.amazon.com.tr/
-        self.driver.get(self.get_json_config()["base_url"])
+        self.driver.get(self.get_base_url())
 
         #2. Verify that you are on the home page
         header_comp = HeaderComp(self.driver)
@@ -49,6 +49,7 @@ class TestClass(BaseTest):
         product_page.add_product_to_card()
 
         #9. Verify that the product has been added to the cart
+        self.wait_if_defined()
         self.assertEqual(header_comp.get_number_of_products_on_cart(), 1,
                          "Error: Product hasn't been added to the cart!")
 
