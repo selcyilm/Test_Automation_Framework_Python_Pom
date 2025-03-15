@@ -60,3 +60,15 @@ You can run it like this:
 ```bash
 python -m unittest discover tests
 ```
+## Run Test Cases
+
+You can run tests using the following command:
+```bash
+python -m unittest discover tests
+```
+> **Note**
+> 
+> If you run tests from PyCharm,
+> leave the config path as is(config path is in base_test.py file).
+> However, if you're running tests from the terminal,
+> change the config path to "config.json"
